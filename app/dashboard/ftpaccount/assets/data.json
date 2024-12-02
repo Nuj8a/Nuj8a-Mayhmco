@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "hostname": "gnc.edu.np",
+    "directory": "/root/u99382/domains/gnc.edu.np/public_html",
+    "username": "u983982test"
+  },
+  {
+    "id": 2,
+    "hostname": "example1.edu.np",
+    "directory": "/root/u12345/domains/example1.edu.np/public_html",
+    "username": "u12345test"
+  },
+  {
+    "id": 3,
+    "hostname": "example2.edu.np",
+    "directory": "/root/u67890/domains/example2.edu.np/public_html",
+    "username": "u67890test"
+  },
+  {
+    "id": 4,
+    "hostname": "example3.edu.np",
+    "directory": "/root/u23456/domains/example3.edu.np/public_html jkfashd hfds kjhfdsa fdshkjfdsah ksfdhfs kajhfda skjfdsha kfdsjah kj",
+    "username": "u23456test"
+  },
+  {
+    "id": 5,
+    "hostname": "example4.edu.np",
+    "directory": "/root/u34567/domains/example4.edu.np/public_html",
+    "username": "u34567test"
+  },
+  {
+    "id": 6,
+    "hostname": "example5.edu.np",
+    "directory": "/root/u45678/domains/example5.edu.np/public_html",
+    "username": "u45678test"
+  },
+  {
+    "id": 7,
+    "hostname": "example6.edu.np",
+    "directory": "/root/u56789/domains/example6.edu.np/public_html",
+    "username": "u56789test"
+  },
+  {
+    "id": 8,
+    "hostname": "example7.edu.np",
+    "directory": "/root/u67890/domains/example7.edu.np/public_html",
+    "username": "u67890test"
+  },
+  {
+    "id": 9,
+    "hostname": "example8.edu.np",
+    "directory": "/root/u78901/domains/example8.edu.np/public_html",
+    "username": "u78901test"
+  },
+  {
+    "id": 10,
+    "hostname": "example9.edu.np",
+    "directory": "/root/u89012/domains/example9.edu.np/public_html",
+    "username": "u89012test"
+  }
+]

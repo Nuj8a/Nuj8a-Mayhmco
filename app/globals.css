@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+  
+}
+@layer base {
+  :root {
+    --background: 220 80% 99%; /* Light blue with high brightness */
+    --foreground: 220 15% 10%; /* Dark greyish blue for better readability */
+    --muted: 235 100% 88%; /* Muted light blue */
+    --muted-foreground: 220 10% 40%; /* Soft blue-grey text */
+    --popover: 220 80% 98%; /* Subtle background for popovers */
+    --popover-foreground: 220 15% 10%; /* Matching foreground */
+    --card: 220 80% 98%; /* Soft card background */
+    --card-foreground: 220 15% 10%; /* Dark foreground for cards */
+    --border: 220 10% 85%; /* Subtle border for light theme */
+    --input: 220 10% 85%; /* Matching inputs */
+    --primary: 260 90% 55%; /* Rich purple-blue for primary actions */
+    --primary-foreground: 230 20% 98%; /* White text on primary */
+    --secondary: 200 40% 85%; /* Cool secondary color */
+    --secondary-foreground: 200 25% 40%; /* Softer contrast for secondary text */
+    --accent: 260, 15%, 90%; /* Accent color matching the primary */
+    --accent-foreground: 20 48% 12%; /* White on accent elements */
+    --destructive: 10 80% 55%; /* Strong red for destructive actions */
+    --destructive-foreground: 10 100% 90%; /* High contrast text */
+    --ring: 260, 15%, 90%; /* Matching ring color for focus */
+    --radius: 0.5rem;
+    --chart-1: 200 75% 55%; /* Cool blue chart color */
+    --chart-2: 340 65% 60%; /* Pinkish red */
+    --chart-3: 50 85% 65%; /* Vibrant yellow */
+    --chart-4: 120 75% 55%; /* Teal green */
+    --chart-5: 30 85% 70%; /* Warm orange */
+  }
+
+  .dark {
+    --background: 230 25% 12%; /* Dark blue-grey for dark mode */
+    --foreground: 230 20% 95%; /* Light text for readability */
+    --muted: 230 10% 25%; /* Dark muted background */
+    --muted-foreground: 230 15% 70%; /* Softer text on muted areas */
+    --popover: 230 25% 12%; /* Matching dark popovers */
+    --popover-foreground: 230 20% 95%; /* Light text in dark mode */
+    --card: 230 25% 15%; /* Darker cards */
+    --card-foreground: 230 20% 98%; /* Light text on cards */
+    --border: 230 15% 35%; /* Subtle border */
+    --input: 230 15% 35%; /* Input background */
+    --primary: 210 100% 50%; /* Bright blue for primary elements */
+    --primary-foreground: 230 20% 98%; /* Light text on primary */
+    --secondary: 210 20% 25%; /* Softer dark mode secondary */
+    --secondary-foreground: 210 20% 85%; /* Light secondary text */
+    --accent: 253 13% 24%; /* Bright accent for dark mode */
+    --accent-foreground: 230 20% 98%; /* Light text on accents */
+    --destructive: 0 85% 55%; /* Strong red for destructive actions */
+    --destructive-foreground: 0 100% 95%; /* High contrast text */
+    --ring: 253 13% 24%; /* Focus ring */
+    --chart-1: 210 70% 60%; /* Cool blue chart */
+    --chart-2: 340 70% 55%; /* Bright red chart */
+    --chart-3: 50 85% 65%; /* Vibrant yellow */
+    --chart-4: 120 75% 55%; /* Cool green */
+    --chart-5: 30 85% 70%; /* Warm orange */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply box-border bg-background text-foreground;
+  }
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  display: none;
+}
+
+@layer utilities {
+  .min-h-screen {
+    min-height: 100vh; /* Fallback */
+    min-height: 100dvh;
+  }
+  .h-screen {
+    height: 100vh; /* Fallback */
+    height: 100dvh;
+  }
+}
+
+.popover-content {
+  z-index: 5000000;
+}
+
+

@@ -1,0 +1,80 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Category {
+  id             Int       @id @default(autoincrement())
+  name           String
+  position       Int       @map("displayOrder") 
+  isActive       Boolean   @default(true)
+  parentId       Int?      
+  parent         Category? @relation("ParentChild", fields: [parentId], references: [id])
+  children       Category[] @relation("ParentChild")
+  
+  displayMode    String    
+  description    String
+  Banner         String?
+  metaTitle      String
+  slug           String?
+  metaKeyword    String?
+  metaDescription String?
+
+  deletedAt      DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt   
+}
+
+model Banner {
+  id             Int       @id @default(autoincrement())
+  name           String
+  description    String
+  banner         String?
+
+  position       Int       @map("displayOrder") 
+  isActive       Boolean   @default(true)
+  displayMode    String?    
+
+  deletedAt      DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt   
+}
+
+model Highlight {
+  id             Int       @id @default(autoincrement())
+  name           String
+  highlight      String    @default("") 
+  position       Int       @map("displayOrder")
+  isActive       Boolean   @default(true)
+  deletedAt      DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Admin {
+  id             Int      @id @default(autoincrement())
+  name           String
+  email          String   @unique
+  passwordHash   String
+  phoneNumber    String?
+  role           Int      
+  status         String   
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  deletedAt      DateTime?
+  profile        String?
+  verified       Boolean @default(false)
+}
