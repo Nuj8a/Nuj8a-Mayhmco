@@ -1,6 +1,7 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
 
 interface BannerInfo {
   title: string;
@@ -37,11 +38,16 @@ const type_1 = (bannerInfo: BannerInfo[]) => {
         className="h-[350px] rounded-2xl"
       >
         {bannerInfo.map((b, index) => (
-          <SwiperSlide key={index} className="rounded-2xl bg-black p-5 lg:p-10">
-            <div className="h-full lg:w-fit flex flex-col gap-4 lg:px-10 lg:py-4 items-center justify-end lg:items-start">
-              <h1 className='text-2xl font-bold'>{b.title}</h1>
+          <SwiperSlide
+            key={index}
+            className="rounded-2xl bg-purple-500 p-5 lg:p-10"
+          >
+            <div className="flex h-full flex-col items-center justify-end gap-4 lg:w-fit lg:items-start lg:px-10 lg:py-4">
+              <h1 className="text-2xl font-bold">{b.title}</h1>
               <p>{b.description}</p>
-              <p className="w-[80%] lg:w-fit p-2 lg:px-4 text-center rounded-lg bg-slate-400">{b.cta}</p>
+              <button className="w-[80%] rounded-lg bg-gray-200 p-2 text-center font-semibold text-[#222222] lg:w-fit lg:px-4">
+                {b.cta}
+              </button>
             </div>
           </SwiperSlide>
         ))}

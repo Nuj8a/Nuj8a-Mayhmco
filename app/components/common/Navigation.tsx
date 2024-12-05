@@ -6,6 +6,8 @@ import React from 'react';
 import Logo from '@/assets/logo.png';
 import { FaShoppingBag, FaUser } from 'react-icons/fa';
 import { IoSearch } from 'react-icons/io5';
+import { LiaShoppingBagSolid } from "react-icons/lia";
+import { FaRegUser } from "react-icons/fa6";
 // import { NavigationLink } from './NavigationLink';
 
 const Navigation = () => {
@@ -20,7 +22,7 @@ const Navigation = () => {
   }
 
   return (
-    <header className="z-[99999999] h-[50px] lg:h-[60px] w-full bg-[#FFEBB1] shadow-md">
+    <header className="z-[99999999] h-[50px] lg:h-[60px] w-full  shadow-md">
       <div className="relative mx-auto flex h-full w-full items-center justify-between px-5 lg:px-10">
         {/* Logo Section */}
         <div className="z-50 flex items-center gap-3">
@@ -39,12 +41,12 @@ const Navigation = () => {
           <div className="group">
             <Link
               href="/sunglasses"
-              className="cursor-pointer  py-4 text-sm font-medium hover:text-gray-600"
+              className="cursor-pointer py-4 text-sm lg:text-base font-normal hover:text-gray-600"
             >
               Sunglasses
             </Link>
-            <div className="hidden group-hover:block">
-              <div className="absolute left-0 right-0 top-12 z-10 mx-auto flex w-full justify-center gap-[10%] bg-white px-5 py-8 shadow ">
+            <div className="hidden group-hover:block ">
+              <div className="absolute left-0 right-0 top-[60px] z-10 mx-auto flex w-full justify-center gap-[10%] bg-white px-5 py-8 shadow ">
                 <div>
                   <h3 className="text-lg font-semibold text-red-600">
                     Shop For
@@ -83,13 +85,13 @@ const Navigation = () => {
 
           <Link
             href="/eyeglasses"
-            className="text-sm font-medium hover:text-gray-600"
+            className="text-sm lg:text-base font-normal hover:text-gray-600"
           >
             Eyeglasses
           </Link>
           <Link
             href="/contact-lens"
-            className="text-sm font-medium hover:text-gray-600"
+            className="text-sm lg:text-base font-normal hover:text-gray-600"
           >
             Contact Lens
           </Link>
@@ -98,10 +100,10 @@ const Navigation = () => {
         {/* Right Section */}
         <div className="hidden lg:flex items-center gap-5">
           {/* Search Bar */}
-          <div className="relative flex items-center">
+          <div className="relative flex items-center border-2 border-gray-400 rounded-2xl px-1 py-1">
             <input
-              placeholder="Search..."
-              className="w-[150px] border-b-2 border-gray-800 bg-transparent px-2 py-1 pr-8 text-sm text-gray-800 placeholder-gray-500 outline-none sm:w-[200px]"
+              placeholder="Search glasses"
+              className="w-[150px] bg-transparent px-2 py-[2px] pr-8 text-sm text-gray-800 placeholder-gray-500 outline-none sm:w-[200px]"
             />
             <IoSearch
               className="absolute right-2 text-lg text-gray-600"
@@ -112,11 +114,13 @@ const Navigation = () => {
           {/* User Icon */}
           <Link href="/profile" aria-label="User Profile">
             <FaUser className="text-lg text-gray-800 hover:text-gray-600" />
+            {/* <FaRegUser className="text-xl text-black hover:text-gray-600" /> */}
           </Link>
 
           {/* Shopping Bag */}
           <Link href="/cart" aria-label="Shopping Cart">
             <FaShoppingBag className="text-lg text-gray-800 hover:text-gray-600" />
+            {/* <LiaShoppingBagSolid size={25} className="text-lg text-black hover:text-gray-600" /> */}
           </Link>
         </div>
       </div>
