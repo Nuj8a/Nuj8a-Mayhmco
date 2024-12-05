@@ -20,12 +20,12 @@ const Navigation = () => {
   }
 
   return (
-    <header className="z-[99999999] h-[50px] w-full bg-[#FFEBB1] shadow-md">
+    <header className="z-[99999999] h-[50px] lg:h-[60px] w-full bg-[#FFEBB1] shadow-md">
       <div className="relative mx-auto flex h-full w-full items-center justify-between px-5 lg:px-10">
         {/* Logo Section */}
         <div className="z-50 flex items-center gap-3">
           <Image
-            className="h-[60px] w-auto object-contain"
+            className="h-[60px] lg:h-[70px] w-auto object-contain"
             src={Logo}
             alt="Mayhm.co logo"
             height={500}
