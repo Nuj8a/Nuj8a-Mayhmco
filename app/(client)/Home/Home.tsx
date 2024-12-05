@@ -8,8 +8,8 @@ import AdBanner from "../../components/banner/AdBanner"
 const Home = () => {
   return (
     <div className="h-fit w-full items-center flex flex-col ">
-      {/* <Main /> */}
       <MainBanner type={1}></MainBanner>
+      <Main />
       <Carousel title="Best Selling" data={data} />
       {/* <AdBanner/> */}
       <Carousel title="New Arrivals" data={data}/>

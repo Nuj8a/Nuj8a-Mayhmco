@@ -1,7 +1,7 @@
 import img_bg from "@/assets/mayhmco.png"
 const  Main = () => {
     return (
-        <div className=" group relative w-full h-[500px]">
+        <div className=" group relative w-full h-[500px] p-10">
             {/* background image */}
             <div className="absolute inset-0 h-full group-hover:blur-sm transition-[filter] duration-1000 ease-in-out bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: `url(${img_bg.src})` }} >
